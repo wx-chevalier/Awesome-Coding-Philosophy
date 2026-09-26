@@ -95,22 +95,6 @@ function findMiscreant(people) {
 
 然后在新建的查询函数中去掉副作用。
 
-```js
-function findMiscreant(people) {
-  for (const p of people) {
-    if (p === "Don") {
-      setOffAlarms();
-      return "Don";
-    }
-    if (p === "John") {
-      setOffAlarms();
-      return "John";
-    }
-  }
-  return "";
-}
-```
-
 然后找到所有原函数的调用者，将其改为调用新建的查询函数，并在其后调用一次修改函数（也就是原函数）。于是代码
 
 ```js
@@ -613,13 +597,6 @@ if (!aPlan.xxNEWwithinRange(aRoom.daysTempRange))
 
 #### 调用方...
 
-```js
-const low = aRoom.daysTempRange.low;
-const high = aRoom.daysTempRange.high;
-if (!aPlan.xxNEWwithinRange(aRoom.daysTempRange))
-  alerts.push("room temperature went outside range");
-```
-
 每次替换一处调用代码，每次修改后都要测试。
 
 调用处全部替换完成后，用内联函数（115）将旧函数内联到新函数体内。
@@ -658,13 +635,6 @@ if (!aPlan.withinRange(aRoom.daysTempRange))
 我从一处调用现有函数的代码开始。
 
 #### 调用方...
-
-```js
-const low = aRoom.daysTempRange.low;
-const high = aRoom.daysTempRange.high;
-if (!aPlan.withinRange(low, high))
-  alerts.push("room temperature went outside range");
-```
 
 我要先对代码做一些整理，以便用提炼函数（106）来创建新函数。目前的调用者代码还不具备可提炼的函数雏形，不过我可以先做几次提炼变量（119），使其轮廓显现出来。首先，我要把对旧函数的调用从条件判断中解放出来。
 
@@ -832,12 +802,6 @@ discountedPrice(basePrice, discountLevel) {
 然后用改变函数声明（124）手法移除该参数。
 
 #### class Order...
-
-```js
-get finalPrice() {
- const basePrice = this.quantity * this.itemPrice;
- return this.discountedPrice(basePrice, this.discountLevel);
-}
 
 discountedPrice(basePrice, discountLevel) {
  switch (this.discountLevel) {
@@ -1406,13 +1370,6 @@ execute () {
 
 #### class Scorer...
 
-```js
-constructor(candidate, medicalExam, scoringGuide){
- this._candidate = candidate;
- this._medicalExam = medicalExam;
- this._scoringGuide = scoringGuide;
-}
-
 execute () {
  this._result = 0;
  this._healthLevel = 0;
@@ -1610,13 +1567,6 @@ function charge(customer, usage, provider) {
 然后修改 charge 函数的实现，改为使用传入的参数。这个修改可以小步进行，每次使用一个参数。
 
 #### class ChargeCalculator...
-
-```js
-constructor (customer, usage, provider){
- this._customer = customer;
- this._usage = usage;
- this._provider = provider;
-}
 
 charge(customer, usage, provider) {
  const baseCharge = customer.baseRate * this._usage;
