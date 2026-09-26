@@ -34,16 +34,16 @@ Kent Beck 提出的简单设计原则，内容为：
 
 ```java
 /**
- *  ...
- *  @param numThreads The number of threads that this manager should
- *  spin up in order to manage ongoing connections. The MessageManager
- *  spins up at least one thread for every open connection, so this
- *  should be at least equal to the number of connections you expect
- *  to be open at once. This should be a multiple of that number if
- *  you expect to send a lot of messages in a short amount of time.
- *  @param handler Used as a callback in order to handle incoming
- *  messages on this MessageManager's open connections. See
- *  {@code MessageHandler} and {@code handleMessage} for details.
+ -  ...
+ -  @param numThreads The number of threads that this manager should
+ -  spin up in order to manage ongoing connections. The MessageManager
+ -  spins up at least one thread for every open connection, so this
+ -  should be at least equal to the number of connections you expect
+ -  to be open at once. This should be a multiple of that number if
+ -  you expect to send a lot of messages in a short amount of time.
+ -  @param handler Used as a callback in order to handle incoming
+ -  messages on this MessageManager's open connections. See
+ -  {@code MessageHandler} and {@code handleMessage} for details.
  */
 ```
 
@@ -51,18 +51,18 @@ Kent Beck 提出的简单设计原则，内容为：
 
 ```java
 /**
- *  @param numThreads
- *           The number of threads that this manager should spin up in
- *           order to manage ongoing connections. The MessageManager spins
- *           up at least one thread for every open connection, so this
- *           should be at least equal to the number of connections you
- *           expect to be open at once. This should be a multiple of that
- *           number if you expect to send a lot of messages in a short
- *           amount of time.
- *  @param handler
- *           Used as a callback in order to handle incoming messages on
- *           this MessageManager's open connections. See
- *           {@code MessageHandler} and {@code handleMessage} for details.
+ -  @param numThreads
+ -           The number of threads that this manager should spin up in
+ -           order to manage ongoing connections. The MessageManager spins
+ -           up at least one thread for every open connection, so this
+ -           should be at least equal to the number of connections you
+ -           expect to be open at once. This should be a multiple of that
+ -           number if you expect to send a lot of messages in a short
+ -           amount of time.
+ -  @param handler
+ -           Used as a callback in order to handle incoming messages on
+ -           this MessageManager's open connections. See
+ -           {@code MessageHandler} and {@code handleMessage} for details.
  */
 ```
 
@@ -112,8 +112,8 @@ for (int pass = 1; pass >= 0 && !empty; pass--) {
 
 ```cpp
 /**
- * This method is invoked in the dispatch thread by a transport if a
- * transport-level error prevents an RPC from completing.
+ - This method is invoked in the dispatch thread by a transport if a
+ - transport-level error prevents an RPC from completing.
  */
 void Transport::RpcNotifier::failed() {
     ...

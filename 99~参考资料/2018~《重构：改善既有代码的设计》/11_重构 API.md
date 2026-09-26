@@ -19,7 +19,6 @@ sendBill();
 return result;
 }
 
-
 function totalOutstanding() {
 return customer.invoices.reduce((total, each) => each.amount + total, 0);
 }
@@ -520,7 +519,6 @@ const low = aRoom.daysTempRange.low;
 const high = aRoom.daysTempRange.high;
 if (aPlan.withinRange(low, high))
 
-
 if (aPlan.withinRange(aRoom.daysTempRange))
 ```
 
@@ -749,7 +747,6 @@ availableVacation(anEmployee, anEmployee.grade);
 function availableVacation(anEmployee, grade) {
   // calculate vacation...
 
-
   availableVacation(anEmployee)
 
 function availableVacation(anEmployee) {
@@ -860,7 +857,6 @@ discountedPrice(basePrice, discountLevel) {
 function targetTemperature(aPlan) {
   currentTemperature = thermostat.currentTemperature;
   // rest of function...
-
 
   targetTemperature(aPlan, thermostat.currentTemperature)
 
@@ -1008,7 +1004,6 @@ JavaScript 的类模型有一个问题：无法强制要求类的不可变性—
 class Person {
 get name() {...}
 set name(aString) {...}
-
 
 class Person {
 get name() {...}

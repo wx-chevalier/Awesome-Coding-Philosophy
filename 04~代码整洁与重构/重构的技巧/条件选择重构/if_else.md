@@ -2,8 +2,8 @@
 
 ```js
 /**
- * 按钮点击事件
- * @param {number} status 活动状态：1 开团进行中 2 开团失败 3 商品售罄 4 开团成功 5 系统取消
+ - 按钮点击事件
+ - @param {number} status 活动状态：1 开团进行中 2 开团失败 3 商品售罄 4 开团成功 5 系统取消
  */
 const onButtonClick = (status) => {
   if (status == 1) {
@@ -33,8 +33,8 @@ const actions = {
 };
 
 /**
- * 按钮点击事件
- * @param {number} status 活动状态：1开团进行中 2开团失败 3 商品售罄 4 开团成功 5 系统取消
+ - 按钮点击事件
+ - @param {number} status 活动状态：1开团进行中 2开团失败 3 商品售罄 4 开团成功 5 系统取消
  */
 const onButtonClick = status => {
   let action = actions[status] || actions["default"],

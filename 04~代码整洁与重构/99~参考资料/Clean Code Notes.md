@@ -566,10 +566,10 @@ It is just plain silly to have a rule that says that every function must have a 
 ```java
 /**
 *
-* @param title The title of the CD
-* @param author The author of the CD
-* @param tracks The number of tracks on the CD
-* @param durationInMinutes The duration of the CD in minutes
+- @param title The title of the CD
+- @param author The author of the CD
+- @param tracks The number of tracks on the CD
+- @param durationInMinutes The duration of the CD in minutes
 */
 public void addCD(String title, String author, int tracks, int durationInMinutes) {
   CD cd = new CD();
@@ -586,13 +586,13 @@ public void addCD(String title, String author, int tracks, int durationInMinutes
 Sometimes people add a comment to the start of a module every time they edit it. Example:
 
 ```java
-* Changes (from 11-Oct-2001)
-* --------------------------
-* 11-Oct-2001 : Re-organised the class and moved it to new package com.jrefinery.date (DG);
-* 05-Nov-2001 : Added a getDescription() method, and eliminated NotableDate class (DG);
-* 12-Nov-2001 : IBD requires setDescription() method, now that NotableDate class is gone (DG); Changed getPreviousDayOfWeek(),
+- Changes (from 11-Oct-2001)
+- --------------------------
+- 11-Oct-2001 : Re-organised the class and moved it to new package com.jrefinery.date (DG);
+- 05-Nov-2001 : Added a getDescription() method, and eliminated NotableDate class (DG);
+- 12-Nov-2001 : IBD requires setDescription() method, now that NotableDate class is gone (DG); Changed getPreviousDayOfWeek(),
 getFollowingDayOfWeek() and getNearestDayOfWeek() to correct bugs (DG);
-* 05-Dec-2001 : Fixed bug in SpreadsheetDate class (DG);
+- 05-Dec-2001 : Fixed bug in SpreadsheetDate class (DG);
 ```
 
 Today we have source code control systems, we don't need this type of logs.
@@ -603,7 +603,7 @@ The comments in the follow examples doesn't provides new information.
 
 ```java
 /**
-* Default constructor.
+- Default constructor.
 */
 protected AnnualDateRule() {
 }
@@ -703,25 +703,25 @@ HTML in source code comments is an abomination, as you can tell by reading the c
 
 ```java
 /**
-* Task to run fit tests.
-* This task runs fitnesse tests and publishes the results.
-* <p/>
-* <pre>
-* Usage:
-* &lt;taskdef name=&quot;execute-fitnesse-tests&quot;
-* classname=&quot;fitnesse.ant.ExecuteFitnesseTestsTask&quot;
-* classpathref=&quot;classpath&quot; /&gt;
-* OR
-* &lt;taskdef classpathref=&quot;classpath&quot;
-* resource=&quot;tasks.properties&quot; /&gt;
-* <p/>
-* &lt;execute-fitnesse-tests
-* suitepage=&quot;FitNesse.SuiteAcceptanceTests&quot;
-* fitnesseport=&quot;8082&quot;
-* resultsdir=&quot;${results.dir}&quot;
-* resultshtmlpage=&quot;fit-results.html&quot;
-* classpathref=&quot;classpath&quot; /&gt;
-* </pre>
+- Task to run fit tests.
+- This task runs fitnesse tests and publishes the results.
+- <p/>
+- <pre>
+- Usage:
+- &lt;taskdef name=&quot;execute-fitnesse-tests&quot;
+- classname=&quot;fitnesse.ant.ExecuteFitnesseTestsTask&quot;
+- classpathref=&quot;classpath&quot; /&gt;
+- OR
+- &lt;taskdef classpathref=&quot;classpath&quot;
+- resource=&quot;tasks.properties&quot; /&gt;
+- <p/>
+- &lt;execute-fitnesse-tests
+- suitepage=&quot;FitNesse.SuiteAcceptanceTests&quot;
+- fitnesseport=&quot;8082&quot;
+- resultsdir=&quot;${results.dir}&quot;
+- resultshtmlpage=&quot;fit-results.html&quot;
+- classpathref=&quot;classpath&quot; /&gt;
+- </pre>
 */
 ```
 
@@ -809,11 +809,11 @@ The vertical density implies close association. So lines of code that are tightl
 public class ReporterConfig {
 
 	/**
-	 * The class name of the reporter listener */
+	 - The class name of the reporter listener */
 	private String m_className;
 
 	/**
-	 * The properties of the reporter listener */
+	 - The properties of the reporter listener */
 	private List<Property> m_properties = new ArrayList<Property>();
 
 	public void addProperty(Property property) { m_properties.add(property);
